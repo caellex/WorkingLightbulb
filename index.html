@@ -5,87 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-    <style>
-        .borderTop {
-            
-            border-top: ridge black 1px;
-            border-right: ridge black 1px;
-            border-left: ridge black 1px;
-            height: 275px;
-            width: 250px;
-            border-radius: 40%;
-            background-image: url(bulb.png);
-            background-repeat: no-repeat;
-            background-size: 320px 420px;
-            background-position: center;
-            background-position-y: -20px;
-            margin: auto auto auto;
-            margin-top: 10px;
-        }
-
-        .shadowTop {
-            border-top: ridge black 1px;
-            border-right: ridge black 1px;
-            border-left: ridge black 1px;
-            height: 275px;
-            width: 250px;
-            border-radius: 40%;
-            background-repeat: no-repeat;
-            background-size: 320px 420px;
-            background-position: center;
-            background-position-y: -20px;
-            margin: auto auto auto;
-        }
-
-        .bottomBulb {
-
-            border-left: solid black 1px;
-            border-right: solid black 1px;
-            border-bottom: solid black 1px;
-            border-radius: 40%;
-            height: 120px;
-            width: 100px;
-            background-image: url(bottom.png);
-            margin: auto auto;
-            
-        }
-
-        .bulbStatus {
-            box-shadow: 0px 0px 200px black;
-        }
-        .center{
-            display: flex;
-            justify-content: center;
-            margin-top: 430px;
-            
-
-        }
-    </style>
+    
 
     <div id="container">
-        <div id="topBulb" class="" onclick="toggleBulb()"></div>
+        <div id="topBulb" class=""></div>
         <div id="botBulb" class="bottomBulb"></div>
     </div>
 
-    <script>
-        checkState()
-var lightToggle = false;
-
-        function toggleBulb() {
-            document.getElementById('topBulb').innerHTML = /*HTML*/ `
-            <div class="bulb topBulb borderTop" style="box-shadow: ${lightToggle ? "0px 0px 200px black; " : "0px 0px 200px yellow; "};">
-            <div class="center"><button onclick="checkState()">${lightToggle ? "Turn On" : "Turn off"}</button></div>    
-                `
-        }
-        function checkState() {
-            lightToggle = !lightToggle;
-            toggleBulb();
-        }
-    </script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
